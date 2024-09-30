@@ -1,0 +1,535 @@
+body {
+    font-family: 'Roboto', sans-serif;
+  
+    color: #333;
+    margin: 0;
+    padding: 0;
+  
+  }
+  
+  .app-container {
+    position: relative; 
+    max-width: 1200px;
+    margin: 42px auto;
+    
+    
+    
+   
+    padding: 20px;
+    border: 12px;
+   border: 20px solid black;
+    background-color: rgba(9, 212, 226, 0.9);
+    box-shadow: 40px 40px 40px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+  body{
+    
+    background-color: white !important;
+    
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .main-title {
+    font-size: 4em;
+    color: #ff4500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 69, 0, 0.5);
+    margin: 0;
+    animation: titlePulse 2s infinite alternate, rainbowText 5s linear infinite;
+  }
+  
+  @keyframes titlePulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.05) rotate(2deg); }
+  }
+  
+  @keyframes rainbowText {
+    0% { color: #ff4500; }
+    25% { color: #ffd700; }
+    50% { color: #00ff00; }
+    75% { color: #00bfff; }
+    100% { color: #ff4500; }
+  }
+  
+  
+  
+  
+  
+  .welcome-menu {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 30px auto;
+    border: 20px solid black;
+    transition: all 0.3s ease;
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  .welcome-menu:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  .menu-section {
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-section:hover {
+    background-color: #e9ecef;
+    transform: scale(1.02);
+  }
+  
+  .menu-section label {
+    font-size: 1.2em;
+    color: #007bff;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .rounds-selection {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .round-button {
+    padding: 10px 20px;
+    border: 2px solid #007bff;
+    background-color: #fff;
+    color: #007bff;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 25px;
+    flex: 1 0 auto;
+    max-width: 80px;
+  }
+  
+  .round-button:hover {
+    background-color: #007bff;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+  
+  .round-button.selected {
+    background-color: #007bff;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.5);
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  .stat-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid #007bff;
+    border-radius: 25px;
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg fill="%23007bff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>') no-repeat right 10px center #fff;
+    background-size: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .stat-select:hover, .stat-select:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+  }
+  
+  .start-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  .start-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: glowing 1.5s infinite;
+  }
+  
+  @keyframes glowing {
+    0% { box-shadow: 0 0 5px #28a745; }
+    50% { box-shadow: 0 0 20px #28a745; }
+    100% { box-shadow: 0 0 5px #28a745; }
+  }
+  
+  .start-button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+    animation: none;
+  }
+  
+  .battle-arena {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    animation: fadeIn 1s ease-out;
+    background:  yellow;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .pokemon-pool {
+    display: flex;
+    justify-content: space-between;
+    width: 100% ;
+    margin-bottom: 30px;
+    perspective: 1000px;
+  }
+  
+  .pokemon-hand {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center; 
+    align-items: center;
+   
+    animation: rotateIn 0.8s ease-out;
+    transform-style: preserve-3d;
+  }
+  
+  @keyframes rotateIn {
+    from { transform: rotateY(90deg); opacity: 0; }
+    to { transform: rotateY(0); opacity: 1; }
+  }
+  
+  .pokemon-card {
+    width: 150px;
+    height: 210px;
+    margin: 10px;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px #d1d9e6, -5px -5px 15px #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .pokemon-card:hover {
+    transform: translateY(-10px) rotate(0deg) scale(1.05);
+    z-index: 10;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .pokemon-card.selected {
+    transform: translateY(-20px) rotate(0deg) scale(1.1);
+    box-shadow: 0 20px 40px rgba(0, 123, 255, 0.3);
+    z-index: 20;
+    animation: selectedPulse 2s infinite;
+  }
+  
+  @keyframes selectedPulse {
+    0% { box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(0, 123, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 123, 255, 0); }
+  }
+  
+  .pokemon-card h4 {
+    font-size: 1em;
+    margin: 10px 0;
+    text-align: center;
+    color: #333;
+  }
+  
+  .pokemon-image {
+    width: 120px;
+    height: 120px;
+    background-position: ce;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  
+  .pokemon-card:hover .pokemon-image,
+  .pokemon-card.selected .pokemon-image {
+    transform: scale(1.1) rotate(5deg);
+  }
+  
+  .pokemon-card .stats {
+    padding: 10px;
+    background-color: rgba(0, 123, 255, 0.1);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .pokemon-card:hover .stats,
+  .pokemon-card.selected .stats {
+    transform: translateY(0);
+  }
+  
+  .battle-button {
+    display: block;
+    width: 200px;
+    margin: 30px auto;
+    padding: 15px;
+    background: linear-gradient(45deg, #ff4500, #ff8c00);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .battle-button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+  }
+  
+  .battle-button:hover::before {
+    left: 100%;
+  }
+  
+  .battle-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 69, 0, 0.4);
+  }
+  
+  
+  
+  .battle-info {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 0.5s ease-out;
+  }
+  
+  .battle-info h4 {
+    font-size: 1.5em;
+    color: #007bff;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .stat-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .stat-info:hover {
+    background-color: #e9ecef;
+    transform: translateX(5px);
+  }
+  
+  .results {
+    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 30px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-out;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .results h3 {
+    font-size: 2.5em;
+    color: #ff4500;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+  }
+  
+  .score-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .score-card {
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    padding: 20px 40px;
+    border-radius: 15px;
+    font-size: 1.4em;
+    box-shadow: 5px 5px 15px #d1d9e6, -5px -5px 15px #ffffff;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .score-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+  }
+  
+  .score-card:hover::before {
+    left: 100%;
+  }
+  
+  .score-card:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .winner-announcement {
+    font-size: 2.2em;
+    color: #ff4500;
+    margin: 30px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: winnerGlow 2s infinite alternate;
+    width: 100%;
+    text-align: center;
+  }
+  
+  @keyframes winnerGlow {
+    from { text-shadow: 0 0 5px #ff4500, 0 0 10px #ff4500, 0 0 15px #ff4500; }
+    to { text-shadow: 0 0 10px #ff4500, 0 0 20px #ff4500, 0 0 30px #ff4500; }
+  }
+  
+  .reset-button {
+    background: linear-gradient(45deg, #00f260, #0575e6);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .reset-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 245, 96, 0.4);
+  }
+  .winner-announcement {
+    font-size: 2.2em;
+    color: #ffc107;
+    margin: 30px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: winnerGlow 2s infinite alternate;
+  }
+  .pokemon-selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+   
+    margin: 0 auto;
+
+  }
+
+  @media  (max-width: 768px) {
+    .pokemon-selection {
+      flex-direction: column;
+    }
+
+    .pokemon-card {
+      margin-bottom: 20px;
+    }
+
+    .pokemon-card:last-child {
+      margin-bottom: 0;
+    }
+
+    .reset-button {
+      margin-top: 0;
+    }
+
+    .winner-announcement {
+      margin-top: 0;
+    }
+
+    .score-card {
+      margin: 5px;
+    }
+
+    .score-container {
+      flex-direction: column;
+        
+    }
+    h3{
+      font-size: 1.5em;
+    }
+    h4{
+      font-size: 1.2em;
+    }
+
+
+     
+    
+  }
+    
